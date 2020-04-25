@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  unit-test:
+    build:
+      context: .
+      dockerfile: src/Device.Simulator.WorkerService/Dockerfile
+      target: test
+    entrypoint:
+      - dotnet
+      - test
+      - --logger
+      - trx;LogFileName=/test-results/unit-test-results.trx
+      - --configuration
+      - Release
+      - --no-build
+      - /p:UseSourceLink=true
+      - /p:CollectCoverage=true
+      - /p:CoverletOutputFormat="opencover,cobertura"
+      - /p:CoverletOutput=/test-results/
+      - --use-source-link
+    volumes:
+    - ./test-results/unit-test-results:/test-results

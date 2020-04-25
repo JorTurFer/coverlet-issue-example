@@ -1,0 +1,36 @@
+name: $(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+- master
+
+variables:
+
+stages:
+- stage: build
+  displayName: "Build image && artifacts"
+  pool:
+    vmImage: 'ubuntu-18.04'
+  jobs:
+  - job:
+    steps:   
+    - task: DockerCompose@0
+      displayName: 'Execute tests'
+      inputs:
+        containerregistrytype: 'Container Registry'
+        dockerComposeFile: '**/docker-compose-test.yml'
+        action: 'Run a Docker Compose command'
+        dockerComposeCommand: 'up'
+   
+    - task: PublishTestResults@2
+      displayName: 'Publish test results'
+      inputs:
+        testResultsFormat: VSTest
+        testResultsFiles: '**/*.trx'
+    
+    - task: PublishCodeCoverageResults@1
+      displayName: 'Publish code coverage report'
+      inputs:
+        codeCoverageTool: Cobertura
+        summaryFileLocation: '$(System.DefaultWorkingDirectory)/test-results/**/coverage.cobertura.xml'
+    
+    
