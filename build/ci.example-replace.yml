@@ -3,8 +3,6 @@ name: $(Date:yyyyMMdd)$(Rev:.r)
 trigger:
 - master
 
-variables:
-
 stages:
 - stage: build
   displayName: "Build image && artifacts"
@@ -25,7 +23,7 @@ stages:
       displayName: 'Update source paths in cobertura reports'
       inputs:
         filePath: 'solution-items/CoveragePathConvereter.ps1'
-        arguments: '"$(System.DefaultWorkingDirectory)/test-results" "$(System.DefaultWorkingDirectory)/test-results-updated" "$(System.DefaultWorkingDirectory)" "source/"'
+        arguments: '"$(System.DefaultWorkingDirectory)/test-results" "$(System.DefaultWorkingDirectory)/test-results-updated" "$(System.DefaultWorkingDirectory)" "/source/"'
         errorActionPreference: 'silentlyContinue'
         pwsh: true
     

@@ -18,6 +18,5 @@ services:
       - /p:CollectCoverage=true
       - /p:CoverletOutputFormat="opencover,cobertura"
       - /p:CoverletOutput=/test-results/
-      - --use-source-link
     volumes:
     - ./test-results/unit-test-results:/test-results

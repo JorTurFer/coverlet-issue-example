@@ -15,7 +15,7 @@ $elements | ForEach-Object -Process {
     $newFilePath = $_.FullName.Replace($sourceDir,$targetDir)
     New-Item "$($newDirectory)" -itemtype directory
     $fileContent = Get-Content -path $_ -Raw
-    $fileUpdated = $fileContent.Replace("<source>/</source>","<source>$($newSource)</source>").Replace("filename=`"$($countainerFolder)",'filename="')
+    $fileUpdated = $fileContent.Replace("<source></source>","<source>$($newSource)</source>").Replace("filename=`"$($countainerFolder)",'filename="')
     Write-Host "Updated file $($_) to $($newFilePath)"
     $fileUpdated | Set-Content -Path $newFilePath -Force    
 }

@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure Pieplines", "Azure Pi
 		build\ci.example.yml = build\ci.example.yml
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Device.Simulator", "src\Device.Simulator\Device.Simulator.csproj", "{5FA64E23-1099-4372-9D7F-5DD534053063}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{10BDC98F-5FFD-4707-AB4F-5BFF6EE0B71E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10BDC98F-5FFD-4707-AB4F-5BFF6EE0B71E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10BDC98F-5FFD-4707-AB4F-5BFF6EE0B71E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FA64E23-1099-4372-9D7F-5DD534053063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FA64E23-1099-4372-9D7F-5DD534053063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FA64E23-1099-4372-9D7F-5DD534053063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FA64E23-1099-4372-9D7F-5DD534053063}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{BFBFF377-33B2-4820-8745-FC073DB8155E} = {C7ED230E-FA1B-4670-B346-D4053FEF769F}
 		{10BDC98F-5FFD-4707-AB4F-5BFF6EE0B71E} = {EC08B4FB-3F5E-4C3B-9FFC-1F788B320AE1}
 		{8D184410-3A2A-4A6E-B2DE-324F3E501866} = {FBF042EE-2FED-4E86-AC01-1729FB8C774C}
+		{5FA64E23-1099-4372-9D7F-5DD534053063} = {EC08B4FB-3F5E-4C3B-9FFC-1F788B320AE1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78884037-A95E-4F2C-A8FD-EE037BD73D13}

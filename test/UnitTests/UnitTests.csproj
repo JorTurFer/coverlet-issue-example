@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Device.Simulator.WorkerService\Device.Simulator.WorkerService.csproj" />
+    <ProjectReference Include="..\..\src\Device.Simulator\Device.Simulator.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
+using Device.Simulator;
 using Microsoft.Extensions.Logging.Abstractions;
 using System.Threading;
 using System.Threading.Tasks;
-using Device.Simulator.WorkerService;
 using Xunit;
 
 namespace UnitTests

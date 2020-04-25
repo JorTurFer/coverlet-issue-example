@@ -3,8 +3,6 @@ name: $(Date:yyyyMMdd)$(Rev:.r)
 trigger:
 - master
 
-variables:
-
 stages:
 - stage: build
   displayName: "Build image && artifacts"

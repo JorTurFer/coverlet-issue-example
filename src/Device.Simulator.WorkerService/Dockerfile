@@ -5,6 +5,7 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS restore
 WORKDIR /source
 COPY ["src/Device.Simulator.WorkerService/Device.Simulator.WorkerService.csproj", "src/Device.Simulator.WorkerService/"]
+COPY ["src/Device.Simulator/Device.Simulator.csproj", "src/Device.Simulator/"]
 COPY ["test/UnitTests/UnitTests.csproj", "test/UnitTests/"]
 COPY ["*.sln", "."]
 RUN dotnet restore 
